@@ -31,13 +31,13 @@ COPY main.go .
 COPY healthcheck ./healthcheck
 
 RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o server
-RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o health-check "github.com/mgorav/go-docker-healthcheck/healthcheck"
+RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o health-check "/go-docker-healthcheck/healthcheck"
 
 # Stage 2: Create release image
 FROM scratch as releaseImage
 
-COPY --from=buildImage /go/src/github.com/mgorav/go-docker-healthcheck/server ./server
-COPY --from=buildImage /go/src/github.com/mgorav/go-docker-healthcheck/health-check ./healthcheck
+COPY --from=buildImage /go-docker-healthcheck/server ./server
+COPY --from=buildImage /go-docker-healthcheck/health-check ./healthcheck
 
 HEALTHCHECK --interval=1s --timeout=1s --start-period=2s --retries=3 CMD [ "/healthcheck" ]
 
