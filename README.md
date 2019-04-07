@@ -5,6 +5,7 @@ An healthcheck is addded to Dockerfile to check the status of docker via docker 
 So overcome this problem, the idea to add another following Docker layer:
 
 ```go
+package main
 import (
 	"fmt"
 	"net/http"
