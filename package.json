@@ -1,0 +1,13 @@
+{
+  "name": "golang-docker-healthcheck",
+  "version": "1.0.0",
+  "author": "Gonnect",
+  "private": false,
+  "repository": "github:mgorav/go-docker-healthcheck",
+  "scripts": {
+    "build": "docker build -t mgorav/go-docker-healthcheck .",
+    "start": "docker run --rm -d -p 8080:8080 --name golang-docker-healthchecmgorav/go-docker-healthcheck",
+    "stop": "docker stop go-docker-healthcheck",
+    "inspect": "docker inspect golang-docker-healthcheck --format {{.State.Health.Status}}"
+  }
+}
