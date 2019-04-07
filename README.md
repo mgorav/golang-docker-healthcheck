@@ -50,4 +50,4 @@ ENTRYPOINT [ "/server" ]
 
 ## Conclusion
 
-This project demonstrates health-check for a server implemented in Go, for a docker container built from scratch.
+This project demonstrates health-check for a server implemented in Go, for a docker container build from scratch.
