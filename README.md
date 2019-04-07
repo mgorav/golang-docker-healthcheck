@@ -1,7 +1,8 @@
-## Problem statement
+## WHY?
 
 A healthcheck is added to Dockerfile to check the status of docker via docker inspect using HTTP protocol. LINUX/MAC OS has CURL or WGET command but freshly created docker container does not contain these command.
 
+## HOW?
 So to overcome this problem, the idea to add another following healthcheck Docker layer:
 
 ```go
