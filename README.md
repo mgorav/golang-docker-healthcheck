@@ -52,3 +52,32 @@ ENTRYPOINT [ "/server" ]
 ## Conclusion
 
 This project demonstrates health-check for a server implemented in Go, for a docker container build from scratch. This example demonstrates adding extension layer(s) to docker.
+
+
+## Top docker utilities
+
+1. ctop: top like interface for container
+```bash
+brew install ctop
+```
+2. rocker
+```bash
+brew install grammarly/tap
+brew install grammarly/top/rocker
+
+```
+
+3. docker-slim
+
+```
+https://github.com/docker-slim/docker-slim/releases
+```
+
+4. docker-gc
+
+```
+https://github.com/spotify/docker-gc/blob/master/README.md
+```
+
+5. watchtower: Automatically update Docker containers
+
