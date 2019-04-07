@@ -1,5 +1,5 @@
 # Stage 1: Build executable
-FROM golang:1.9.2 as buildImage
+FROM golang:1.12.1 as buildImage
 
 WORKDIR /go/src/github.com/Soluto/golang-docker-healthcheck
 COPY main.go .
