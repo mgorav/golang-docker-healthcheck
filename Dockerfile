@@ -6,7 +6,7 @@ COPY main.go .
 COPY healthcheck ./healthcheck
 
 RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o server
-RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o health-check "github.com/mgirav/go-docker-healthcheck/healthcheck"
+RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o health-check "github.com/mgorav/go-docker-healthcheck/healthcheck"
 
 # Stage 2: Create release image
 FROM scratch as releaseImage
